@@ -1,5 +1,5 @@
 {
-  "name": "react-lyz",
+  "name": "react-4",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,5 +14,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://forsuccess.github.io/react-lyz/build"
+  "homepage": "https://forsuccess.github.io/react-4/build"
 }

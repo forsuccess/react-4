@@ -4,12 +4,13 @@ import TodoInput from './TodoInput'
 import './reset.css'
 import 'normalize.css'
 import './App.css'
+import * as localStore from './localStore'
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       newTodo: '',
-      todoList: []
+        todoList: localStore.load('todoList') || []
 
     }
   }
@@ -33,6 +34,9 @@ class App extends Component {
       </div>
     );
   }
+    componentDidUpdate(){
+        localStore.save('todoList', this.state.todoList)
+    }
   addTodo(event) {
     this.state.todoList.push({
       id: idMaker(),
